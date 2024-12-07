@@ -1,0 +1,63 @@
+.speakers {
+  background-color: $background-light;
+  container-name: speakers-container;
+  container-type: inline-size;
+  padding: 20px;
+  text-align: center;
+
+  .speakers__title {
+    color: $primary-color;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .speakers__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .speakers__item {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 1 calc(33.33% - $gap);
+    max-width: 33.33%;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .speakers__name {
+    color: #492d98;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .speakers__description {
+    color: $text-color;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .speakers__img{
+    width:100%;
+  }
+}
+
+
+@container speakers-container (max-width: 768px) {
+  .speakers__item {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+}
+
+@container speakers-container (max-width: 480px) {
+  .speakers__item {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+}

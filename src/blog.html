@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <title>Jornadas de ciberseguridad - Blog</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <div class="container-fluid">
+      <main class="blog">
+        <div class="blog__header">
+          <h2 class="blog__title">Un grupo de hackers asegura tener 560 GB de datos robados de Hacienda</h2>
+          <p class="blog__author">Por Ilan Cherre</p>
+        </div>
+        <div class="blog__body">
+          <p>El aviso que ha recibido la Agencia Tributaria ha hecho que salten todas las alarmas, aunque todavía se desconoce la veracidad de este ataque. El colectivo Trinity no ha ofrecido ningún tipo de información acerca de la información que han obtenido, simplemente han realizado la amenaza donde exigen el pago del rescate.</p>
+
+          <blockquote class="blog__quote">
+            "No se ha detectado ningún indicio de posibles equipos cifrados o salidas de datos."
+            <cite>- Agencia Tributaria</cite>
+          </blockquote>
+
+          <p>¿De dónde ha surgido el aviso del hackeo a la Agencia Tributaria? Ha sido HackManac quien ha informado de lo que está ocurriendo, la firma de ciberseguridad publicó en X, antes Twitter, que el colectivo Trinity se encontraba en posesión de 560 GB de datos sustraídos de la Agencia Tributaria.</p>
+
+          <p>Mientras esta situación no se aclara solo se puede seguir de cerca los movimientos tanto de Trinity como de otras amenazas similares.</p>
+
+          <ul class="blog__list">
+            <li>Trinity se especializa en ransomware.</li>
+            <li>HackManac monitoriza actividades sospechosas.</li>
+            <li>La Agencia Tributaria investiga el incidente.</li>
+          </ul>
+
+          <figure class="blog__figure">
+            <img src="assets/images/incidente1.png" alt="Hackers asegurando datos robados" class="blog__image">
+            <figcaption>Un ejemplo de ransomware en acción.</figcaption>
+          </figure>
+
+        </div>
+      </main>
+    </div>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

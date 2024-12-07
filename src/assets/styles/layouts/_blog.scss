@@ -1,0 +1,84 @@
+.blog__header {
+  align-items: center;
+  background-image: url(../images/blog.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 275px;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.blog__header::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.blog__header h2,
+.blog__header .blog__author {
+  position: relative;
+  z-index: 2;
+}
+
+.blog__body {
+	margin:	40px;
+}
+
+.blog__quote {
+  border-left: 4px solid $secondary-color;
+  color: #333;
+  font-style: italic;
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+}
+
+.blog__quote cite {
+  color: #666;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.blog__list {
+  list-style: none;
+  padding: 0;
+}
+
+.blog__list li::before {
+  content: "✔";
+  margin-right: 0.5rem;
+}
+
+.blog__figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.blog__image {
+  border-radius: 5px;
+  height: auto;
+  max-width: 100%;
+}
+
+.blog__body:has(.blog__quote) {
+  border-top: 10px solid #74FAE4;
+}
+
+.blog__list :is(li:first-child, li:last-child) {
+  font-weight: bold;
+}
+
+.blog__header :where(h2, .blog__author) {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}

@@ -5,23 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Jornadas de ciberseguridad</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <include src="./views/header.html"></include>
+    <div class="container-fluid">
+      <main class="poster">
+        <div class="poster__content">
+          <div class="celda celda--pequena celda--azul"></div>
+          <div class="celda celda--pequena celda--lila"></div>
+          <div class="celda celda--pequena celda--verde"></div>
+          <div class="celda celda--pequena celda--azul"></div>
+          <div class="celda celda--pequena celda--lila"></div>
+          <div class="celda celda--extragrande"><h1>Jornadas de ciberseguridad</h1><h2>21 y 22 de diciembre en Santiago</h2></div>
+          <div class="celda celda--pequena celda--lila"></div>
+          <div class="celda celda--pequena celda--verde"></div>
+          <div class="celda celda--grande">
+            <img class="celda__img" src="assets/images/candado.png" alt="Candado">
+          </div>
+          <div class="celda celda--pequena celda--verde"></div>
+          <div class="celda celda--pequena celda--verde"></div>
+          <div class="celda celda--pequena celda--lila"></div>
+          <div class="celda celda--pequena celda--lila"></div>
+          <div class="celda celda--pequena celda--azul"></div>
+          <div class="celda celda--pequena celda--verde"></div>
+        </div>
+      </main>
+    </div>    
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <title>Jornadas de ciberseguridad - Formulario de Contacto</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <main class="container">
+      <form class="contact__form" action="" method="post">
+        <div class="contact__row">
+          <div class="contact__field">
+            <label for="name" class="contact__label">Nombre y Apellidos</label>
+            <input type="text" id="name" name="name" class="contact__input" placeholder="Escribe tu nombre" required>
+          </div>
+          <div class="contact__field">
+            <label for="email" class="contact__label">Correo Electrónico</label>
+            <input type="email" id="email" name="email" class="contact__input" placeholder="Escribe tu correo" required>
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__field">
+            <label for="message" class="contact__label">Mensaje</label>
+            <textarea id="message" name="message" class="contact__textarea" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+          </div>
+        </div>
+        <div class="contact__row">
+          <button type="submit" class="contact__button">Enviar</button>
+        </div>
+      </form>
+    </main>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

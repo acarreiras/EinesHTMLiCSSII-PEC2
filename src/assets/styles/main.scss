@@ -23,7 +23,30 @@
  * It's a best practice to use a different partial for each page
  */
 
+/**
+* Importamos Bootstrap
+*/
+@import "bootstrap/scss/bootstrap.scss";
+
+/**
+*Importamos fontawesome
+*/
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+/**
+*Importamos clases diseño
+*/
 @import "layouts/home";
+@import "layouts/speakers";
+@import "layouts/contact";
+@import "layouts/blog";
+@import "components/footer";
+@import "components/header";
+@import "layouts/typography";
+
+
+
+
 
 /**
  * Do NOT include anything else in this file!

@@ -1,57 +1,120 @@
-* {
-  box-sizing: border-box;
+.poster {
+  container-name: poster-container;
+  container-type: inline-size;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+.poster__content {
+  align-items: center; /* Centrado vertical */
+  display: flex; /* Flexbox por defecto */
+  flex-direction: row; /* Dirección horizontal */
+  justify-content: space-between; /* Título a la izquierda, imagen a la derecha */
+  padding: 20px;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+/* Estilos de las celdas */
+
+.celda--extragrande {
+  text-align: left; /* Alinea el texto a la izquierda */
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+.celda--grande img {
+  height: auto; /* Mantiene la proporción */
+  max-width: 300px; /* Tamaño máximo para evitar imágenes gigantes */
+  width: 100%; /* Ajusta el tamaño de la imagen */
+}
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+
+@supports (display: grid) {
+  h1{
+  font-size: 3.5rem;
+  }
+
+  .poster__content {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 0;
+    width: 100%;
+  }
+
+  .celda{
+    aspect-ratio:1/1;
+  }
+
+  .celda--extragrande {
+    align-content: center;
+    grid-column: span 3; /* Abarca 2 columnas */
+    grid-row: span 4; /* Abarca 2 filas */
+    text-align: center;
+  }
+
+  .celda--grande {
+    align-content: center;
+    grid-column: span 2; /* Abarca 2 columnas */
+    grid-row: span 2; /* Abarca 2 filas */
+    text-align: center;
+  }
+
+  .celda--pequena {
+    grid-column: span 1; /* Abarca 1 columna */
+    grid-row: span 1; /* Abarca 1 fila */
+  }
+
+  .celda--azul{
+    background:$primary-color;
+  }
+
+  .celda--lila{
+    background:$secondary-color;
+  }
+
+  .celda--verde{
+    background:$celda-verde;
+  }
+
+  .celda__img {
+    width:100%
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+@container poster-container (max-width: 768px) {
+  .poster__content {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .celda {
+    aspect-ratio: auto;
+    margin-bottom: 10px; /* Espaciado entre celdas */
+    width: 100%; /* Cada celda ocupa todo el ancho */
+  }
+
+  .celda--extragrande {
+    order: 1; /* El título aparece primero */
+    padding: 20px;
+    text-align: center; /* Centra el texto */
+  }
+
+  .celda--grande {
+    align-items: center;
+    display: flex; /* Centra la imagen */
+    justify-content: center;
+    order: 2; /* La imagen aparece después del título */
+  }
+
+  .celda--pequena {
+    display: none;
+  }
+
+  .celda--grande img {
+  height: auto; /* Mantiene la proporción */
+  width: 100% !important; /* Ajusta el tamaño de la imagen */
+}
+
+  h1 {
+    font-size: 2rem;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
-}
