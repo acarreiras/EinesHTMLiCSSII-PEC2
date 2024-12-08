@@ -64,7 +64,7 @@
 
 @container footer-container (max-width: 768px) {
   .footer__container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     text-align: center;
   }
 
